@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src=".jpg" alt="AI Medical Logo">
+        </div>
+        <h2>Welcome to AI Med System</h2>
+        <p class="subtext">Secure AI-powered medical solutions</p>
+        <form id="loginForm"> <!-- Added ID here -->
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+                <span class="icon">👤</span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required> 
+                <span class="icon">🔒</span>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        
+        <p class="footer">Forgot Password? <a href="reset.html">Reset</a></p>
+        <p class="footer">Don't have an account?<a href="Login.html">Signup</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

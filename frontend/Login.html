@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="Styles.css" rel="stylesheet">
+    <style>
+        .login-container {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <h2 class="login-title">Sign Up</h2>
+            <form action="/signup" method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label"><b>Username</b></label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label"><b>Password</b></label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>    
+                <div class="mb-3">
+                    <label for="confirm password" class="form-label"><b>Confirm Password</b></label>
+                    <input type="confirm password" class="form-control" id="password" name="password" required>
+                </div>    
+                <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

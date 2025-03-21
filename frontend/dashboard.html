@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dashboard.css"> <!-- Custom styles -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For charts -->
+</head>
+<body>
+    <script>
+        // Check if user is logged in
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "index.html"; // Redirect to login page if not logged in
+        }
+    </script>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>AI Med System</h2>
+            <ul>
+                <li><a href="#">🏠 Home</a></li>
+                <li><a href="#">👨‍⚕️ Doctors</a></li>
+                <li><a href="#">🩺 Patients</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+                <li><a href="#" id="logout">🚪 Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header>
+                <h1>Dashboard</h1>
+                <p>Welcome, <span id="username">Loading...</span></p>
+            </header>
+
+            <!-- Quick Overview Section -->
+            <section class="overview">
+                <h3>📊 Quick Overview</h3>
+                <p>This dashboard provides real-time insights into hospital activities,how the AI works and how it is being used</p>
+            </section>
+            <!-- User Info Section -->
+            <section class="user-info">
+                <h3>👤 User Details</h3>
+                <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+                <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+                <p><strong>Last Diagnosis:</strong> <span id="userDiagnosis">No records yet</span></p>
+            </section>
+
+            <!-- AI Chat History Section -->
+            <section class="chat-history">
+                <h3>💬 AI Chat History</h3>
+                <p>View your past conversations with the AI.</p>
+                <div id="chatList">
+                <p>Loading chat history...</p>
+                </div>
+            </section>
+
+
+            <!-- Charts Section with Explanation -->
+            <section class="charts">
+                <h3>📈 Hospital Performance Overview</h3>
+                <canvas id="patientsChart"></canvas>
+                <p class="chart-explanation">This chart displays the distribution of medical staff and patients in the hospital. Use this to monitor hospital workload.</p>
+            </section>
+        </main>
+    </div>
+    <button id="aiChatButton" class="ai-chat-btn">🤖 AI Chat</button>
+    <script src="dashboard.js"></script> <!-- Custom script -->
+</body>
+</html>
